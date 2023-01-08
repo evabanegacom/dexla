@@ -1,38 +1,77 @@
-.App {
-  text-align: center;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@font-face {
+  font-family: notosans;
+  src: url("./font/NotoSansJP-Bold.otf");
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+@font-face {
+  font-family: notosans-regular;
+  src: url("./font/NotoSansJP-Regular.otf");
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+:root {
+  --notosansJP-bold: notosans;
+  --notosansJP-Regular: notosans-regular;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+  color: #fff;
+  background: #1e1e1e;
+}
+
+.container button,
+.container__div {
+  cursor: pointer;
+  background: #fff;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  width: 264px;
+  height: 248px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.container__text-one {
+  font-family: var(--notosansJP-bold);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 22px;
+  margin-top: 1rem;
+  text-align: center;
+  color: #121212;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.container__text-two {
+  font-family: var(--notosansJP-Regular);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  margin-top: 1rem;
+  text-align: center;
+  letter-spacing: 0.25px;
+  color: #76757b;
+}
+
+.container__image-div {
+  background: #f4fafa;
+  border-radius: 50%;
+  width: 64px;
+  height: 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
